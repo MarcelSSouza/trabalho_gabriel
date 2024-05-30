@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Chatbot</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        #chatbot {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 80vh;
+            max-height: 500px;
+            width: 100%;
+            max-width: 400px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        #chatbot-messages {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+        }
+
+        #chatbot-messages .message {
+            margin-bottom: 10px;
+        }
+
+        #chatbot-messages .message.user {
+            text-align: right;
+        }
+
+        #chatbot-messages .message.bot {
+            text-align: left;
+        }
+
+        #chatbot-input {
+            display: flex;
+            border-top: 1px solid #ddd;
+        }
+
+        #chatbot-input input {
+            flex: 1;
+            border: none;
+            padding: 10px;
+        }
+
+        #chatbot-input button {
+            border: none;
+            padding: 10px 20px;
+        }
+
+        @media (max-width: 768px) {
+            #chatbot {
+                width: 100%;
+                height: 60vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand"  href="./index.html">AI Hospital</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page"  href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./servicos.html">Serviços</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="./unidades.html">Unidades</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./contacto.html">Deixe sua avaliação</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./chat.html">Nosso Doutor ChatBot</a>
+                  </li>
+               
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="container mt-5">
+        <h1 class="mb-4">Como Usar o Chatbot Antes da Consulta</h1>
+        <p>O uso do nosso chatbot pode ajudar significativamente a reduzir o tempo de espera e preparar melhor você e nossos profissionais de saúde para a sua consulta. A seguir, explicamos como você pode utilizar o chatbot de forma eficaz:</p>
+        
+        <h2 class="mt-4">Passo a Passo para Utilização do Chatbot:</h2>
+        
+        <ol>
+            <li>
+                <strong>Acesse o Chatbot:</strong>
+                <p>Navegue até a página do chatbot em nosso site. Você encontrará uma interface amigável e intuitiva, pronta para assisti-lo.</p>
+            </li>
+            <li>
+                <strong>Inicie a Conversa:</strong>
+                <p>Ao abrir o chatbot, você será saudado com uma mensagem de boas-vindas. Sinta-se à vontade para iniciar a conversa digitando sua mensagem na caixa de entrada na parte inferior da janela do chatbot.</p>
+            </li>
+            <li>
+                <strong>Descreva Seus Sintomas e Questões:</strong>
+                <p>Forneça ao chatbot uma descrição detalhada dos seus sintomas ou quaisquer questões que você possa ter. Quanto mais informações você fornecer, melhor o chatbot poderá ajudá-lo.</p>
+                <p><em>Exemplo:</em> “Estou sentindo dores de cabeça frequentes e tontura nos últimos dias.”</p>
+            </li>
+            <li>
+                <strong>Responda às Perguntas do Chatbot:</strong>
+                <p>O chatbot pode fazer algumas perguntas adicionais para entender melhor sua condição. Responda com clareza e precisão.</p>
+                <p><em>Exemplo:</em> “Qual a intensidade da dor de cabeça em uma escala de 1 a 10?” Resposta: “7.”</p>
+            </li>
+            <li>
+                <strong>Receba Orientações Preliminares:</strong>
+                <p>Com base nas suas respostas, o chatbot pode fornecer orientações preliminares, como possíveis causas dos seus sintomas ou sugestões de cuidados iniciais.</p>
+                <p><em>Exemplo:</em> “A dor de cabeça pode estar relacionada ao estresse ou à desidratação. Beba bastante água e descanse em um ambiente silencioso.”</p>
+            </li>
+            <li>
+                <strong>Preparação para a Consulta:</strong>
+                <p>Ao finalizar a interação, você terá uma lista clara dos seus sintomas e respostas às perguntas que podem ser importantes para o profissional de saúde. Isso ajudará a tornar a consulta mais focada e eficiente.</p>
+                <p>Leve essas informações com você para a consulta ou, se possível, envie-as antecipadamente através dos canais de comunicação fornecidos pela clínica.</p>
+            </li>
+        </ol>
+        
+        <h2 class="mt-4">Benefícios do Uso do Chatbot:</h2>
+        
+        <ul>
+            <li>
+                <strong>Economia de Tempo:</strong>
+                <p>Ao fornecer informações detalhadas e responder a perguntas preliminares, você reduz o tempo necessário para explicar seus sintomas durante a consulta.</p>
+            </li>
+            <li>
+                <strong>Melhoria na Qualidade do Atendimento:</strong>
+                <p>Informações prévias permitem que os profissionais de saúde estejam melhor preparados para sua consulta, possivelmente começando a planejar seu tratamento antes mesmo de você chegar.</p>
+            </li>
+            <li>
+                <strong>Acesso a Orientações Imediatas:</strong>
+                <p>Receba conselhos e orientações iniciais que podem ajudar a aliviar seus sintomas enquanto aguarda a consulta.</p>
+            </li>
+        </ul>
+        
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div id="chatbot">
+        <div id="chatbot-messages" class="bg-light">
+            <div class="message bot">
+                <div class="alert alert-secondary">Olá! Como posso ajudar você hoje? Descreva seus sintomas para eu te auxiliar antes da sua consulta.</div>
+            </div>
+        </div>
+        <div id="chatbot-input">
+            <input type="text" class="form-control" placeholder="Digite sua mensagem...">
+            <button class="btn btn-primary">Enviar</button>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#chatbot-input button').on('click', function () {
+            var input = $('#chatbot-input input');
+            var message = input.val();
+            if (message.trim()) {
+                $('#chatbot-messages').append('<div class="message user"><div class="alert alert-primary">' + message + '</div></div>');
+                input.val('');
+                // Scroll to the bottom
+                $('#chatbot-messages').scrollTop($('#chatbot-messages')[0].scrollHeight);
+                // Simulate bot response
+                setTimeout(function () {
+                    $('#chatbot-messages').append('<div class="message bot"><div class="alert alert-secondary">Esta é uma resposta automática.</div></div>');
+                    $('#chatbot-messages').scrollTop($('#chatbot-messages')[0].scrollHeight);
+                }, 1000);
+            }
+        });
+    });
+</script>
+</body>
+</html>
