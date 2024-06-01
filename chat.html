@@ -22,7 +22,13 @@
             border-radius: 10px;
             overflow: hidden;
         }
-
+        .background-chat{
+            background-image: url('./assets/yy.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
         #chatbot-messages {
             flex: 1;
             padding: 15px;
@@ -69,7 +75,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">AI Hospital</a>
+            <a class="navbar-brand" href="./index.html">HSA IA</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -171,8 +177,8 @@
         </ul>
 
         <div class="container d-flex justify-content-center align-items-center vh-100">
-            <div id="chatbot">
-                <div id="chatbot-messages" class="bg-light">
+            <div id="chatbot" class=" background-chat">
+                <div id="chatbot-messages" class="">
                     <div class="message bot">
                         <div class="alert alert-secondary">Olá! Como posso ajudar você hoje? Descreva seus sintomas para
                             eu te auxiliar antes da sua consulta.</div>
