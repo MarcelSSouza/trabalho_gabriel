@@ -96,7 +96,7 @@
                         <a class="nav-link" href="./contacto.html">Deixe a sua avaliação</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./chat.html">Nosso Doutor ChatBot</a>
+                        <a class="nav-link" href="./chat.html">Doutor ChatBot</a>
                     </li>
 
                 </ul>
@@ -199,23 +199,7 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script>
-            $(document).ready(function () {
-                $('#chatbot-input button').on('click', function () {
-                    var input = $('#chatbot-input input');
-                    var message = input.val();
-                    if (message.trim()) {
-                        $('#chatbot-messages').append('<div class="message user"><div class="alert alert-primary">' + message + '</div></div>');
-                        input.val('');
-                        $('#chatbot-messages').scrollTop($('#chatbot-messages')[0].scrollHeight);
-                        setTimeout(function () {
-                            $('#chatbot-messages').append('<div class="message bot"><div class="alert alert-secondary">Esta é uma resposta automática.</div></div>');
-                            $('#chatbot-messages').scrollTop($('#chatbot-messages')[0].scrollHeight);
-                        }, 1000);
-                    }
-                });
-            });
-        </script>
+    
 </body>
 
 </html>
